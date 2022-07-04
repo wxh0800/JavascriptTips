@@ -16,18 +16,25 @@ console.log(bb)
 console.log(typeof(bb))
 
 function greet(name: string) {
-	console.log("Hello, " + name + "!")
+	console.log("Hello, " + name + "!") 
 }
 
-greet("World");
+greet(name:"World");
 
-// function greet1(name:{firstName: string, lastName: string}) {
-// 	console.log("Hello, " + name.lastName + ", " + name.firstName)
-// }
+function greet1(name:{firstName: string, lastName?: string}) {
+	console.log("Hello, " + name.lastName + ", " + name.firstName)
+}
 
-// const myName = {
-// 	firstName : "abc",
-// 	lastName : "def"
-// }
+const myName = {
+	firstName : "abc",
+	lastName : "def"
+}
 
-// greet1(myName)
+greet1(myName)
+
+function printId(id: number |string) {
+	console.log("ID is: " + id)
+}
+
+printId(5)
+printId('abc')
